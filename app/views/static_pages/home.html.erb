@@ -1,2 +1,27 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+	<body class="container full-height-grow">
+			<header class="main-header">
+						<div class="brand-logo-name">Amy's Science Fair Project</div>
+								<nav class="main-nav">
+												<ul>
+																	<li><button class="page-button" onclick="window.location='home'">Home</button></li>
+																					<li><button onclick="window.location='login'">Login</button></li>
+																									<li><button onclick="window.location='gallery'">Gallery</button></li>
+																													<li><button onclick="window.location='draw'">Draw</button></li>
+																																</ul>
+																																		</nav>
+																																			</header>
+																																				<div style="flex-grow: 1;">
+
+																																							<div class="center">
+																																											<h1 id="big">Welcome</h1>
+																																														<p class="subhead">This website's aim is to provide a more easily<br>accessible 
+																																															solution to mental health problems. Get<br>ready to make and share
+																																																some art!</p>
+																																																	<button onclick="window.location='join'" class="btn">Join Now</button>
+																																																			</div>
+																																																				</div>
+	</body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.0/fabric.min.js"></script>
+	<script src="drawing.js"></script>

@@ -1,0 +1,105 @@
+*, *::before, *::after {
+	  box-sizing: border-box;
+  }
+
+  body {
+	    padding: 0;
+	      margin: 0;
+	        background-color: #adceff;
+		  font-family: Playfair Display, sans-serif;
+		    font-size: 1.2rem;
+		      min-height: 100vh;
+	      }
+
+	      .full-height-grow {
+		        display: flex;
+			  flex-direction: column;
+		  }
+
+		  a {
+			  	text-decoration: none;
+			}
+
+			p {
+					font-family: Playfair Display;
+				}
+
+				.center {
+						display: block;
+							text-align: -webkit-center;
+						} 
+
+						#big {
+							  font-family: Acta Display;
+							  	font-size: 180px;
+								  margin: 0;
+								    padding-top: 80px;
+							    }
+
+							    .subhead {
+								    	font-size: 40px;
+									  margin: 0;
+									    text-align: center;
+								    }
+
+								    /* join button (used in join and home page) */
+								    .btn {
+									      background-color: #606cdd;
+									        color: white;
+										  margin: 2rem;
+										    padding: 1rem 9rem;
+										      border-radius: .5rem;
+										        text-decoration: none;
+											  border: none;
+											    font-family: Playfair Display;
+											      font-size: 1.75rem;
+											        outline: none;
+												  border: none;
+												    cursor: pointer;
+											    }
+
+											    .btn:hover {
+												      background-color: #4450c1;
+											      }
+
+											      .btn:focus {
+												        background-color: #5664de;
+												}
+
+												/* top row */
+												.main-nav ul {
+													  display: flex;
+													    margin: 0;
+													      padding: 0;
+													        list-style: none;
+													}
+
+													.main-nav button:hover {
+														  color: #adadad;
+													  }
+
+													  .main-header {
+														    display: flex;
+														      justify-content: space-between;
+														        align-items: center;
+															  height: 50px;
+														  }
+
+														  .brand-logo-name { /* Amy's Science Fair Project */
+															    margin-left: 1rem;
+														    }
+
+														    ul button { /* main nav bar */
+															      font-family: Playfair Display;
+															        font-size: 20px;
+																  border: none;
+																    margin: 4px;
+																      width: 80px;
+																        display: block;
+																		border-radius: 10px;
+																		  background-color: #c6c6c6;
+																	  }
+
+																	  .page-button { /* the page you're on button highlight */
+																		    background-color: white;
+																	    }

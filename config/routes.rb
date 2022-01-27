@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root 'pages#home'
   get 'draw', to: 'pages#draw'
   get 'pages/home'

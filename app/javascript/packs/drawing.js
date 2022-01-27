@@ -1,0 +1,94 @@
+const myCanvas = new fabric.Canvas("demoCanvas", {
+  width: window.innerWidth - 200,
+  height: window.innerHeight - 100,
+  backgroundColor: "white",
+  isDrawingMode: true,
+});
+
+const setColorListener = () => {
+	const picker = document.getElementById("colorPicker")
+	picker.addEventListener("change", (event) => {
+		console.log(event.target.value)
+		color = event.target.value
+		myCanvas.freeDrawingBrush.color = color
+		myCanvas.renderAll()
+	})
+}
+
+const toggleDraw = () => {
+	myCanvas.isDrawingMode=true
+	myCanvas.freeDrawingBrush.color = document.getElementById("colorPicker").value
+};
+
+const createRectangle = () => {
+	const rectangle = new fabric.Rect({
+  	width: 100,
+  	height: 100,
+	fill: color,
+	});
+	myCanvas.add(rectangle);
+	myCanvas.isDrawingMode = false;
+};
+
+const createCircle = () => {
+	const circle = new fabric.Circle({
+	radius: 100,
+	fill: color,
+	});
+	myCanvas.add(circle);
+	myCanvas.isDrawingMode = false;
+}
+
+const createTextbox = () => {
+	const textbox = new fabric.Textbox("Write text here",{
+		width: 400,
+		fill: color,
+	});
+	myCanvas.add(textbox);
+	myCanvas.isDrawingMode = false;
+};
+
+const changeMode = () => {
+	myCanvas.set({ isDrawingMode: !myCanvas.get("isDrawingMode") });
+	if (myCanvas.isDrawingMode) {
+		myCanvas.freeDrawingBrush.color="#000000"
+		document.getElementById('drawing-mode').innerHTML = 'Cancel drawing mode';
+		document.getElementById('options').style.display = '';
+	} else {
+		document.getElementById('drawing-mode').innerHTML = 'Enter drawing mode';
+		document.getElementById('options').style.display = 'none';
+	}
+}
+
+const eraseDrawing = () => {
+	myCanvas.set({ isDrawingMode: true })
+	color="#ffffff"
+	myCanvas.freeDrawingBrush.color = color
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+const setBrushWidth = () => {
+	const pick = document.getElementById("myRange");
+	pick.addEventListener("change", (event) => {
+		console.log(event.target.value)
+		width=parseInt(event.target.value)
+		myCanvas.freeDrawingBrush.width = width
+		myCanvas.renderAll()
+	})
+}
+
+const clearCanvas = () => {
+	myCanvas.clear()
+	myCanvas.setBackgroundColor("white")
+}
+
+let color = "#000000"
+setColorListener()
+setBrushWidth()

@@ -7,11 +7,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="drawing.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <%= javascript_pack_tag 'drawing', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'jscolor', 'data-turbolinks-track': 'reload' %>
 </html>

@@ -1,38 +1,38 @@
 <% provide(:title, "Draw") %>
-								<body class="container full-height-grow">
-																	<header class="main-header">
-																						<div class="brand-logo-name">Amy's Science Fair Project</div>
-																													<nav class="main-nav">
-																																								<ul>
-																																																				<li><button onclick="window.location='home'">Home</button></li>
-																																																								<li><button onclick="window.location='login'">Login</button></li>
-																																																												<li><button onclick="window.location='gallery'">Gallery</button></li>
-																																																																<li><button class="page-button" onclick="window.location='draw'">Draw</button></li>
-																																																																			</ul>
-																																																																					</nav>
-																																																																						</header>
+<body class="container full-height-grow">
+	<header class="main-header">
+		<div class="brand-logo-name">Amy's Science Fair Project</div>
+			<nav class="main-nav">
+				<ul>
+					<li><button onclick="window.location='home'">Home</button></li>
+					<li><button onclick="window.location='login'">Login</button></li>
+					<li><button onclick="window.location='gallery'">Gallery</button></li>
+					<li><button class="page-button" onclick="window.location='draw'">Draw</button></li>
+					<li><button onclick="window.location='users'">Users</button></li>
+				</ul>
+			</nav>
+	</header>
 
-																																																																							<div style="flex-grow: 1;">
-																																																																																	<p class="subhead">Start Drawing Below.</p>
-																																																																																			<div class="sidenav">
-																																																																																											  			<button id="drawing-mode" onclick="changeMode()">Cancel drawing mode</button>
-																																																																																																			<div id="options" style>
-																																																																																																															<button onclick="toggleDraw()">Draw</button>
-																																																																																																																			<button onclick="createRectangle()">Rect</button>
-																																																																																																																							<button onclick="createCircle()">Circle</button>
-																																																																																																																											<button onclick="createTextbox()">Text</button>
-																																																																																																																															<button onclick="eraseDrawing()">Erase</button>
-																																																																																																																																			<button onclick="clearCanvas()">Clear</button>
-																																																																																																																																							<p>Color Changer:</p>
-																																																																																																																																											<input id="colorPicker" value="#000000" data-jscolor="">
-																																																																																																																																															<input id="myRange" type="range" min="1" max="100" value="1" class="slider">
-																																																																																																																																																			<p>Brush Width: <span id="demo"></span></p>	
-																																																																																																																																																						</div>
-																																																																																																																																																							
-																																																																																																																																																								</div>
-																																																																																																																																																										<div id="canvasMain">
-																																																																																																																																																																					<canvas id="demoCanvas"/>
-																																																																																																																																																																															</div>
-																																																																																																																																																																																</div>
-								</body>
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.0/fabric.min.js"></script>
+	<div style="flex-grow: 1;">
+		<p class="subhead">Start Drawing Below.</p>
+		<div class="sidenav">
+			<button id="drawing-mode" onclick="changeMode()">Cancel drawing mode</button>
+			<div id="options" style>
+				<button onclick="toggleDraw()">Draw</button>
+				<button onclick="createRectangle()">Rect</button>
+				<button onclick="createCircle()">Circle</button>
+				<button onclick="createTextbox()">Text</button>
+				<button onclick="eraseDrawing()">Erase</button>
+				<button onclick="clearCanvas()">Clear</button>
+				<p>Color Changer:</p>
+				<input id="colorPicker" value="#000000" data-jscolor="">
+				<input id="myRange" type="range" min="1" max="100" value="1" class="slider">
+				<p>Brush Width: <span id="demo"></span></p>	
+			</div>
+		</div>
+		<div id="canvasMain">
+			<canvas id="demoCanvas"/>
+		</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.0/fabric.min.js"></script>

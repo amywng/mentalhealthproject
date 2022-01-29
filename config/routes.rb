@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :users
   root 'pages#home'
+  get 'home', to: 'pages#home'
   get 'draw', to: 'pages#draw'
-  get 'pages/home'
-  get 'pages/draw'
-  get 'pages/login'
-  get 'pages/gallery'
-  get 'pages/join'
+  get 'login', to: 'pages#login'
+  get 'gallery', to: 'pages#gallery'
+  get 'join', to: 'users#new'
+  get 'users', to: 'users#index'
 end

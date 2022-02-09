@@ -15,9 +15,9 @@
 .join-form {
     background-color: #718cd3;
     width: 50vw;
-    max-width: 50%;
     padding: 2rem 4rem;
     border-radius: 20px;
+    margin: 2rem;
 }
 
 .input-group {

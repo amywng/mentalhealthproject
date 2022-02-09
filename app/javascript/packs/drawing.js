@@ -15,12 +15,12 @@ const setColorListener = () => {
 	})
 }
 
-const toggleDraw = () => {
-	myCanvas.isDrawingMode=true
+window.toggleDraw = () => {
+  myCanvas.isDrawingMode=true
 	myCanvas.freeDrawingBrush.color = document.getElementById("colorPicker").value
 };
 
-const createRectangle = () => {
+window.createRectangle = () => {
 	const rectangle = new fabric.Rect({
   	width: 100,
   	height: 100,
@@ -30,7 +30,7 @@ const createRectangle = () => {
 	myCanvas.isDrawingMode = false;
 };
 
-const createCircle = () => {
+window.createCircle = () => {
 	const circle = new fabric.Circle({
 	radius: 100,
 	fill: color,
@@ -39,7 +39,7 @@ const createCircle = () => {
 	myCanvas.isDrawingMode = false;
 }
 
-const createTextbox = () => {
+window.createTextbox = () => {
 	const textbox = new fabric.Textbox("Write text here",{
 		width: 400,
 		fill: color,
@@ -48,30 +48,30 @@ const createTextbox = () => {
 	myCanvas.isDrawingMode = false;
 };
 
-const changeMode = () => {
-	myCanvas.set({ isDrawingMode: !myCanvas.get("isDrawingMode") });
+window.changeMode = () => {
+	myCanvas.set({ isDrawingMode: !myCanvas.get("isDrawingMode") })
 	if (myCanvas.isDrawingMode) {
 		myCanvas.freeDrawingBrush.color="#000000"
-		document.getElementById('drawing-mode').innerHTML = 'Cancel drawing mode';
-		document.getElementById('options').style.display = '';
+		document.getElementById('drawing-mode').innerHTML = 'Cancel drawing mode'
+		document.getElementById('options').style.display = ''
 	} else {
-		document.getElementById('drawing-mode').innerHTML = 'Enter drawing mode';
-		document.getElementById('options').style.display = 'none';
+		document.getElementById('drawing-mode').innerHTML = 'Enter drawing mode'
+		document.getElementById('options').style.display = 'none'
 	}
 }
 
-const eraseDrawing = () => {
+window.eraseDrawing = () => {
 	myCanvas.set({ isDrawingMode: true })
 	color="#ffffff"
 	myCanvas.freeDrawingBrush.color = color
 }
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var slider = document.getElementById("myRange")
+var output = document.getElementById("demo")
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
-  output.innerHTML = this.value;
+  output.innerHTML = this.value
 }
 
 const setBrushWidth = () => {
@@ -84,7 +84,7 @@ const setBrushWidth = () => {
 	})
 }
 
-const clearCanvas = () => {
+window.clearCanvas = () => {
 	myCanvas.clear()
 	myCanvas.setBackgroundColor("white")
 }

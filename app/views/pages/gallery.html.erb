@@ -8,13 +8,32 @@
 																	<li><button class="page-button" onclick="window.location='gallery'">Gallery</button></li>
 																	<li><button onclick="window.location='draw'">Draw</button></li>
 												</ul>
-																																		</nav>
-																																			</header>
+								</nav>
+			</header>
 
 																																			<div class="center">
 																																					<p class="subhead">See what other users are creating.</p>
+																																					<button id="myBtn"></button>
+																																					<div id="widget_container"></div>
 																																			</div>
 	</body>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.3.0/fabric.min.js"></script>
-	<script src="drawing.js"></script>
+	<script src="https://media-library.cloudinary.com/global/all.js"></script>
+<script>
+								window.ml = cloudinary.createMediaLibrary({
+																  cloud_name: 'sciencefair',
+																  api_key: '311537544273765',
+																  remove_header: false,
+																  max_files: '1',
+																  insert_caption: 'Insert',
+																  inline_container: '#widget_container'
+								}, {
+																  insertHandler: function (data) {
+																										    data.assets.forEach(asset => { console.log("Inserted asset:",
+																																						      JSON.stringify(asset, null, 2)) })
+																										    }
+																  },
+																  document.getElementById("myBtn")
+								);
+	</script>

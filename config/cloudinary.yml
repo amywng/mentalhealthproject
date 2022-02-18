@@ -1,0 +1,6 @@
+production:
+          cloud_name: "sciencefair"
+            api_key: "311537544273765"
+              api_secret: "HcI_ro0L_1WnPgsY-KY3BNOg7J0"
+                secure: true
+                  cdn_subdomain: true

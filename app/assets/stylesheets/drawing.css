@@ -14,8 +14,11 @@
 	      .full-height-grow {
 		        display: flex;
 			  flex-direction: column;
-		  }
+	}
 
+#widget_container {
+	height: 80%;
+}
 		  a {
 			  	text-decoration: none;
 			}

@@ -106,3 +106,8 @@
 																	  .page-button { /* the page you're on button highlight */
 																		    background-color: white;
 																	    }
+																		.save_upload {
+																			font-size: 15px !important;
+																			margin-bottom: .5px !important;
+																			display: block;
+																		}

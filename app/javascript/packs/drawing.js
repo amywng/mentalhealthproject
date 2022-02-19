@@ -1,4 +1,4 @@
-const myCanvas = new fabric.Canvas("demoCanvas", {
+const myCanvas = new fabric.Canvas("c", {
   width: window.innerWidth - 200,
   height: window.innerHeight - 100,
   backgroundColor: "white",
@@ -9,8 +9,8 @@ const setColorListener = () => {
 	const picker = document.getElementById("colorPicker")
 	picker.addEventListener("change", (event) => {
 		console.log(event.target.value)
-		color = event.target.value
-		myCanvas.freeDrawingBrush.color = color
+		picked_color = event.target.value
+		myCanvas.freeDrawingBrush.color = picked_color
 		myCanvas.renderAll()
 	})
 }
@@ -24,7 +24,7 @@ window.createRectangle = () => {
 	const rectangle = new fabric.Rect({
   	width: 100,
   	height: 100,
-	fill: color,
+	fill: picked_color,
 	});
 	myCanvas.add(rectangle);
 	myCanvas.isDrawingMode = false;
@@ -33,7 +33,7 @@ window.createRectangle = () => {
 window.createCircle = () => {
 	const circle = new fabric.Circle({
 	radius: 100,
-	fill: color,
+	fill: picked_color,
 	});
 	myCanvas.add(circle);
 	myCanvas.isDrawingMode = false;
@@ -42,7 +42,7 @@ window.createCircle = () => {
 window.createTextbox = () => {
 	const textbox = new fabric.Textbox("Write text here",{
 		width: 400,
-		fill: color,
+		fill: picked_color,
 	});
 	myCanvas.add(textbox);
 	myCanvas.isDrawingMode = false;
@@ -89,6 +89,12 @@ window.clearCanvas = () => {
 	myCanvas.setBackgroundColor("white")
 }
 
-let color = "#000000"
+let picked_color = "#000000"
 setColorListener()
 setBrushWidth()
+
+window.saveImage = () => {
+ document.getElementById("c").toBlob(function(blob) {
+  saveAs(blob);
+ });     
+}

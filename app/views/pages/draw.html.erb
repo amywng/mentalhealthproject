@@ -49,9 +49,10 @@
 			  cloudName: 'sciencefair', 
 					uploadPreset: 'czfampcy',
 					sources: ['local'],
-					allowed_formats: ['jpg']}, (error, result) => { 
+					clientAllowedFormats: ['jpg']}, (error, result) => { 
 				      if (!error && result && result.event === "success") { 
 					            console.log('Done! Here is the image info: ', result.info); 
+																	alert("Thanks for uploading your art! You can view it on the Gallery page, but make sure to save it if necessary as it won't save when you come back. Have a great day :)")
 					          }
 				    }
 		)

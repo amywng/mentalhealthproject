@@ -95,6 +95,6 @@ setBrushWidth()
 
 window.saveImage = () => {
  document.getElementById("c").toBlob(function(blob) {
-  saveAs(blob);
+  saveAs(blob, "artwork.jpg");
  });     
 }
